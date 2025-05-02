@@ -15,7 +15,7 @@
     <script>
         const fanArtData = [
             {
-                "image-link": "https://drive.usercontent.google.com/download?id=1xFZ5MQfClPCgCCYQLumDM4bjtcT-BD1N",
+                "image-link": "https://drive.google.com/open?id=1xFZ5MQfClPCgCCYQLumDM4bjtcT-BD1N",
                 "title": "FAN art",
                 "creator": "Ignorance"
             }
@@ -27,10 +27,10 @@
                 const card = document.createElement("div");
                 card.className = "card";
                 card.innerHTML = `
-                    <img src="${art['image-link']}" alt="${art.title}">
                     <div class="details">
                         <h3>${art.title}</h3>
                         <p>By ${art.creator}</p>
+                        <a href="${art['image-link']}" target="_blank" class="view-link">View Art</a>
                     </div>
                 `;
                 container.appendChild(card);
