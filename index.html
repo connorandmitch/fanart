@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connor & Mitch Fan Art</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="#" class="button">Link</a>
+    </div>
+    <div class="container" id="artContainer"></div>
+
+    <script>
+        const fanArtData = [
+            {
+                "image-link": "https://drive.google.com/open?id=1xFZ5MQfClPCgCCYQLumDM4bjtcT-BD1N",
+                "title": "FAN art",
+                "creator": "Ignorance"
+            }
+        ];
+
+        function loadFanArt() {
+            const container = document.getElementById("artContainer");
+            fanArtData.forEach(art => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                    <img src="${art['image-link']}" alt="${art.title}">
+                    <div class="details">
+                        <h3>${art.title}</h3>
+                        <p>By ${art.creator}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", loadFanArt);
+    </script>
+</body>
+</html>
